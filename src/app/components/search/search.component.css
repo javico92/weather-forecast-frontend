@@ -1,0 +1,18 @@
+.search-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  display: block;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.search-select {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.search-full-width {
+  width: 100%;
+}

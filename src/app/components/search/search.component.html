@@ -1,0 +1,17 @@
+<div>
+  <form fxLayout="row" [formGroup]="formGroup" class="search-form">
+    <mat-form-field appearance="fill" class="search-full-width">
+      <mat-label>Municipality</mat-label>
+      <input type="text" matInput formControlName="municipality" [matAutocomplete]="auto" />
+
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let item of filteredOptions | slice : 0 : 50" [value]="item" (onSelectionChange)="onSelected(item)">
+          {{item.name}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</div>
+<div>
+  <app-forecast [municipality]="selectedMunicipality"></app-forecast>
+</div>
